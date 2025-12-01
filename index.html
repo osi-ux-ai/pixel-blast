@@ -1,0 +1,53 @@
+<!doctype html>
+<html lang="tr">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0" />
+  <title>Pixel Blast</title>
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <main>
+    <section id="menu" class="overlay">
+      <div class="menu-card panel">
+        <div class="brand">
+          <span class="dot">◆</span>
+          <h1>Pixel Blast</h1>
+        </div>
+        <p>Renk eşleşmeli savunma. Yalnızca doğru raydan ateş edip mermiyi boşa harcama.</p>
+        <ul>
+          <li>Kontroller: A/S/D/F ya da renkli butonlar</li>
+          <li>Kaybetme: mermi biterse veya düşman zemine ulaşırsa</li>
+          <li>Zorluk skorla artar; her öldürüş 100 puan</li>
+        </ul>
+        <button id="start" class="primary" type="button">Başla</button>
+      </div>
+    </section>
+
+    <header class="panel hud">
+      <div class="stats">
+        <div>Skor: <span id="score">0</span></div>
+        <div>Mermi: <span id="ammo">0</span></div>
+        <div>Zorluk: <span id="tier">0</span></div>
+      </div>
+    </header>
+
+    <section class="game-wrap">
+      <canvas id="game" width="360" height="640" aria-label="Pixel Blast sahnesi"></canvas>
+      <div id="message" class="message hidden"></div>
+      <button id="restart" class="restart hidden" type="button">Yeniden Başla</button>
+    </section>
+
+    <section class="panel controls">
+      <div class="lane-buttons">
+        <button data-lane="0" class="lane lane-blue">Mavi</button>
+        <button data-lane="1" class="lane lane-red">Kırmızı</button>
+        <button data-lane="2" class="lane lane-yellow">Sarı</button>
+        <button data-lane="3" class="lane lane-green">Yeşil</button>
+      </div>
+    </section>
+  </main>
+
+  <script type="module" src="src/main.js"></script>
+</body>
+</html>
